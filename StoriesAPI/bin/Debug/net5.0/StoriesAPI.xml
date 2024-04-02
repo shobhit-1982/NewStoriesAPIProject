@@ -1,0 +1,678 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StoriesAPI</name>
+    </assembly>
+    <members>
+        <member name="T:StoriesAPI.AutoMapper.AutoMapperProfile">
+            <summary>
+            auto Mapper
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.AutoMapper.AutoMapperProfile.#ctor">
+            <summary>
+            Register my storyDetail and dto class for mapper
+            </summary>
+        </member>
+        <member name="T:StoriesAPI.Base.BaseController">
+            <summary>
+            BaseController
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="M:StoriesAPI.Base.BaseController.StoriesOk(System.Object)">
+            <summary>
+             the stories ok.
+            </summary>
+            <param name="result">The result.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Base.BaseController.StoriesCreated(System.Uri,System.Object)">
+            <summary>
+            stories the created.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Base.BaseController.StoriesNoContent">
+            <summary>
+            the stories content of the no.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Base.BaseController.StoriesNotFound">
+            <summary>
+            stories the not found.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Builders.IResponseBuilder`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilder`1.AddHttpStatus(System.Nullable{System.Int32})">
+            <summary>
+            Adds the HTTP status.
+            </summary>
+            <param name="status">The status.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilder`1.AddMessage(System.String)">
+            <summary>
+            Adds the message.
+            </summary>
+            <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilder`1.AddSuccessData(`0)">
+            <summary>
+            Adds the success data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilder`1.AddError(StoriesAPI.Models.Common.Error)">
+            <summary>
+            Adds the error.
+            </summary>
+            <param name="error">The error.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilder`1.AddError(System.Object,System.Int32)">
+            <summary>
+            Adds the error.
+            </summary>
+            <param name="error">The error.</param>
+            <param name="code">The code.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilder`1.AddErrors(System.Collections.Generic.List{StoriesAPI.Models.Common.Error})">
+            <summary>
+            Adds the errors.
+            </summary>
+            <param name="errors">The errors.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilder`1.Build">
+            <summary>
+            Builds this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Builders.IResponseBuilderFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Builders.IResponseBuilderFactory.GetBuilder``1">
+            <summary>
+            Gets the builder.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Builders.Factory.ResponseBuilderFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Builders.Factory.ResponseBuilderFactory.GetBuilder``1">
+            <summary>
+            Gets the builder.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Builders.ResponseBuilder`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:StoriesAPI.Builders.ResponseBuilder`1"/> class.
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.AddHttpStatus(System.Nullable{System.Int32})">
+            <summary>
+            Adds the status.
+            </summary>
+            <param name="status">The status.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.AddMessage(System.String)">
+            <summary>
+            Adds the message.
+            </summary>
+            <param name="message">The message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.AddSuccessData(`0)">
+            <summary>
+            Adds the success data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.AddError(StoriesAPI.Models.Common.Error)">
+            <summary>
+            Adds the error.
+            </summary>
+            <param name="error">The error.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.AddError(System.Object,System.Int32)">
+            <summary>
+            Adds the error.
+            </summary>
+            <param name="error">The error.</param>
+            <param name="code">The code.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.AddErrors(System.Collections.Generic.List{StoriesAPI.Models.Common.Error})">
+            <summary>
+            Adds the errors.
+            </summary>
+            <param name="errors">The errors.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Builders.ResponseBuilder`1.Build">
+            <summary>
+            Builds this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Caching.Abstraction.ICachingService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Caching.Abstraction.ICachingService.SaveToCacheAsync``1(System.String,``0,System.Nullable{System.Int32})">
+            <summary>
+            Saves to cache asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">The key.</param>
+            <param name="objectToCache">The object to cache.</param>
+            <param name="expirationTimeLimit">The expiration time limit.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Caching.Abstraction.ICachingService.RetrieveFromCacheAsync(System.String)">
+            <summary>
+            Retrieves from cache asynchronous.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Caching.Models.CacheResultModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:StoriesAPI.Caching.Models.CacheResultModel.CacheStatusOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Caching.Models.CacheResultModel.CacheStatusOption.ResultPending">
+            <summary>
+            The result pending
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Caching.Models.CacheResultModel.CacheStatusOption.Cached">
+            <summary>
+            The chached
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Caching.Models.CacheResultModel.CacheStatusOption.Deleted">
+            <summary>
+            The deleted
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Caching.Models.CacheResultModel.CacheStatusOption.DoesNotExists">
+            <summary>
+            The does not exists
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Caching.Models.CacheResultModel.CacheStatusOption.Exists">
+            <summary>
+            The exists
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Caching.Models.CacheResultModel.CacheStatusOption.Error">
+            <summary>
+            The error
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Caching.Models.CacheResultModel.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:StoriesAPI.Caching.Models.CacheResultModel"/> class.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="P:StoriesAPI.Caching.Models.CacheResultModel.CacheKey">
+            <summary>
+            Gets or sets the cache key.
+            </summary>
+            <value>
+            The cache key.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Caching.Models.CacheResultModel.CacheValue">
+            <summary>
+            Gets or sets the cache value.
+            </summary>
+            <value>
+            The cache value.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Caching.Models.CacheResultModel.CacheStatus">
+            <summary>
+            Gets or sets the cache status.
+            </summary>
+            <value>
+            The cache status.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Caching.Models.CacheResultModel.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+            <value>
+            The error.
+            </value>
+        </member>
+        <member name="T:StoriesAPI.Caching.Services.CachingService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Caching.Services.CachingService.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:StoriesAPI.Caching.Services.CachingService"/> class.
+            </summary>
+            <param name="cache">The cache.</param>
+            <param name="constantProvider">The constant provider.</param>
+        </member>
+        <member name="M:StoriesAPI.Caching.Services.CachingService.RetrieveFromCacheAsync(System.String)">
+            <summary>
+            Retrieves from cache asynchronous.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Caching.Services.CachingService.SaveToCacheAsync``1(System.String,``0,System.Nullable{System.Int32})">
+            <summary>
+            Saves to cache asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">The key.</param>
+            <param name="objectToCache">The object to cache.</param>
+            <param name="expirationTimeLimit">The expiration time limit.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Caching.Services.CachingService.CacheExpired_Callback(System.Object,System.Object,Microsoft.Extensions.Caching.Memory.EvictionReason,System.Object)">
+            <summary>
+            Caches the expired callback.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="reason">The reason.</param>
+            <param name="state">The state.</param>
+        </member>
+        <member name="T:StoriesAPI.Common.Enum.ResponseStatus">
+            <summary>
+            Response Status
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Common.Enum.ResponseStatus.OK">
+            <summary>
+            The ok
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Common.Enum.ResponseStatus.Failed">
+            <summary>
+            The failed
+            </summary>
+        </member>
+        <member name="T:StoriesAPI.Common.Enum.StoryType">
+            <summary>
+            enum for story type
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Common.Enum.StoryType.story">
+            <summary>
+            The ok
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Controller.StoriesController._storiesService">
+            <summary>
+            story service
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Controller.StoriesController.#ctor(StoriesAPI.Services.StoriesServices.Interface.IStoriesService)">
+             <summary>
+            Initializes a new instance of the <see cref="T:StoriesAPI.Controller.StoriesController"/> class.
+             </summary>
+             <param name="storiesService"></param>
+        </member>
+        <member name="M:StoriesAPI.Controller.StoriesController.GetTopAllStories(StoriesAPI.Models.PagingParameters)">
+            <summary>
+            Get all top stories
+            </summary>
+            <param name="pagingParameters">see cref="PagingParameters"</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Controller.StoriesController.GetSearchStories(System.String)">
+            <summary>
+            Get all searched stories 
+            </summary>
+            <param name="searchValue"> search value</param>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Middleware.ExceptionMiddlewareExtensions">
+            <summary>
+            Request Response Exception.
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Middleware.ExceptionMiddlewareExtensions.ConfigureExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Extensan mathord
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.Error.UserMessage">
+            <summary>
+            Gets or sets the user message.
+            </summary>
+            <value>
+            The user message.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.Error.ErrorCode">
+            <summary>
+            Gets or sets the error code.
+            </summary>
+            <value>
+            The error code.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.Error.DevMessage">
+            <summary>
+            Gets or sets the dev message.
+            </summary>
+            <value>
+            The dev message.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.Error.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.Error.RowNumber">
+            <summary>
+            The row number
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.Error.Value">
+            <summary>
+            The value
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.ErrorDetails.StatusCode">
+            <summary>
+            status code
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.Common.ErrorDetails.Message">
+            <summary>
+            messege 
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Models.Common.ErrorDetails.ToString">
+            <summary>
+            override string 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:StoriesAPI.Models.APIResponse`1.ApiResponseStatus">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.APIResponse`1.HttpStatus">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.APIResponse`1.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.APIResponse`1.Data">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="P:StoriesAPI.Models.APIResponse`1.Errors">
+            <summary>
+            Gets or sets the errors.
+            </summary>
+            <value>
+            The errors.
+            </value>
+        </member>
+        <member name="T:StoriesAPI.Models.PagingParameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Models.PagingParameters.maxPageSize">
+            <summary>
+            set max page size
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.PagingParameters.PageNumber">
+            <summary>
+            page number
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Models.PagingParameters._pageSize">
+            <summary>
+            page size
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.PagingParameters.PageSize">
+            <summary>
+            set page size
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoriesDetailsDto.TotalRecords">
+            <summary>
+            total records
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoriesDetailsDto.Stories">
+            <summary>
+            story collection
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetail.id">
+            <summary>
+            story id
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetail.title">
+            <summary>
+            story title
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetail.type">
+            <summary>
+            story type
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetail.url">
+            <summary>
+            story url
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetailDto.id">
+            <summary>
+            story id
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetailDto.title">
+            <summary>
+            story title
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetailDto.type">
+            <summary>
+            story type
+            </summary>
+        </member>
+        <member name="P:StoriesAPI.Models.StoryDetailDto.url">
+            <summary>
+            story url
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Services.StoriesServices.Interface.IStoriesService.GetTopAllStories(StoriesAPI.Models.PagingParameters)">
+            <summary>
+            Get All Stories service
+            </summary>
+            <param name="pagingParameters">see cref="PagingParameters"</param>
+            <returns> StoriesDetailsDto </returns>
+        </member>
+        <member name="M:StoriesAPI.Services.StoriesServices.Interface.IStoriesService.GetSearchStories(System.String)">
+            <summary>
+            Get stories list that are mached by search title
+            </summary>
+            <param name="searchtext">searchStoryTitle</param>
+            <returns></returns>
+        </member>
+        <member name="T:StoriesAPI.Services.StoriesServices.Service.StoriesService">
+            <summary>
+            add class contain get stories related data functions
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Services.StoriesServices.Service.StoriesService._httpClient">
+            <summary>
+            The http client 
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Services.StoriesServices.Service.StoriesService._mapper">
+            <summary>
+            The mapper
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Services.StoriesServices.Service.StoriesService._responseBuilderFactory">
+            <summary>
+            The responseBuilderFactory
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Services.StoriesServices.Service.StoriesService._cachingService">
+            <summary>
+            The caching service
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Services.StoriesServices.Service.StoriesService._thirdPartyAPI">
+            <summary>
+            The third party api
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Services.StoriesServices.Service.StoriesService.#ctor(StoriesAPI.Builders.IResponseBuilderFactory,System.Net.Http.HttpClient,AutoMapper.IMapper,StoriesAPI.Caching.Abstraction.ICachingService,StoriesAPI.Services.ThirdPartyAPIService.IThirdPartyAPI)">
+            <summary>
+            Initializes a new instance of the <see cref="T:StoriesAPI.Services.StoriesServices.Service.StoriesService"/> class.
+            </summary>
+            <param name="responseBuilderFactory">responseBuilderFactory</param>
+            <param name="httpclient">httpclient</param>
+            <param name="mapper">mapper</param>
+            <param name="cachingService">cachingService</param>
+            <param name="thirdPartyAPI">thirdPartyAPI</param>
+        </member>
+        <member name="M:StoriesAPI.Services.StoriesServices.Service.StoriesService.GetSearchStories(System.String)">
+            <summary>
+            Get stories list that are mached by search title
+            </summary>
+            <param name="searchStoryTitle">searchStoryTitle</param>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Services.StoriesServices.Service.StoriesService.GetTopAllStories(StoriesAPI.Models.PagingParameters)">
+            <summary>
+            Get All Stories service
+            </summary>
+            <param name="pagingParameters">see cref="PagingParameters"</param>
+            <returns> StoriesDetailsDto </returns>
+        </member>
+        <member name="M:StoriesAPI.Services.StoriesServices.Service.StoriesService.GetDataForStoriesDetails">
+            <summary>
+            get data from thired party API and cached data
+            </summary>
+            <returns>List of StoryDetailDto</returns>
+        </member>
+        <member name="M:StoriesAPI.Services.ThirdPartyAPIService.IThirdPartyAPI.GetAllStoriesIds">
+            <summary>
+            Get all stories ides
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Services.ThirdPartyAPIService.IThirdPartyAPI.GetStorieDetail(System.Int32)">
+            <summary>
+            get story detail
+            </summary>
+            <param name="StoryId">StoryId</param>
+            <returns></returns>
+        </member>
+        <member name="F:StoriesAPI.Services.ThirdPartyAPIService.ThirdPartyAPI._httpClient">
+            <summary>
+            http client
+            </summary>
+        </member>
+        <member name="F:StoriesAPI.Services.ThirdPartyAPIService.ThirdPartyAPI._mapper">
+            <summary>
+            the mapper 
+            </summary>
+        </member>
+        <member name="M:StoriesAPI.Services.ThirdPartyAPIService.ThirdPartyAPI.#ctor(System.Net.Http.HttpClient,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:StoriesAPI.Services.ThirdPartyAPIService.ThirdPartyAPI"/> class.
+            </summary>
+            <param name="httpClient"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:StoriesAPI.Services.ThirdPartyAPIService.ThirdPartyAPI.GetAllStoriesIds">
+            <summary>
+            Get all stories
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StoriesAPI.Services.ThirdPartyAPIService.ThirdPartyAPI.GetStorieDetail(System.Int32)">
+            <summary>
+            get story details
+            </summary>
+            <param name="StoryId">StoryId</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
